@@ -16,6 +16,9 @@ const PostCreate = () => {
       })
       .catch((err) => {
         console.log(`PostCreate submit error: ${err}`);
+      })
+      .then((response) => {
+        console.log(response.data.title);
       });
 
     setTitle('');
@@ -33,6 +36,7 @@ const PostCreate = () => {
             className="form-control"
           />
         </div>
+        <br />
         <button className="btn btn-primary">Submit</button>
       </form>
     </div>
